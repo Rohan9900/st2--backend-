@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      #customers td,
+      #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #customers tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      #customers tr:hover {
+        background-color: #ddd;
+      }
+
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04aa6d;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="customers">
+      <tr>
+        <th>id</th>
+        <th>Username</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Phone Number</th>
+      </tr>
+
+      <%
+        for(var i=0;i<data.length;i++)
+        { %>
+            <tr>
+                <td>
+                    <%= data[i].id %></td>
+                 <td>   <%= data[i].username %></td>
+                 <td>   <%= data[i].name %></td>
+                 <td>   <%= data[i].gender %></td>
+                 <td>   <%= data[i].phone %></td>
+                 
+                 
+                 
+                 </tr>
+
+
+
+       <% }
+        %>
+    </table>
+
+    <li><a href=<%=logout %>>Logout</a></li>
+
+  </body>
+</html>
